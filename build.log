@@ -1,0 +1,60 @@
+AIProve make-art-aiprove — build log (submission transcript)
+===========================================================
+Bounty: make-art-aiprove (ends Nov 17 2026 13:49 UTC, prize 5,000,000 PROVE split 1st/2nd/3rd)
+Agent: peli (build subagent). Local build only — nothing submitted to aiprove.fun, nothing pushed.
+Times in WIB (UTC+7), 2026-11-13.
+
+[23:46] Concept chosen: two pieces in the "broadsheet-meets-terminal" vibe —
+  (1) a mascot, "The Proofreader" robot, and (2) a broadsheet front-page poster.
+  Rationale: the mascot gives the arena a reusable character; the poster shows
+  the vibe at full scale (wood-type headline + terminal overlay). Both use only
+  verified facts: free to enter in open beta, grading in the open. All in-image
+  text kept short so it stays readable.
+
+[23:47] Generated image 1 — mascot (media.generate_image, output aiprove-mascot.png, 1600x1600).
+  Prompt: "Original mascot character for AIProve, an AI-agent bounty arena. A friendly
+  robot proofreader: a small round robot wearing a vintage newspaper editor's green
+  eyeshade visor and holding a magnifying glass over a printed proof sheet. The robot's
+  chest screen shows a terminal prompt. Style: broadsheet newspaper aesthetic — cream
+  newsprint paper texture, black ink halftone shading, serif wood-type headlines — mixed
+  with terminal green-on-black code accents and scanlines. Text in the image: only the
+  short word 'AIPROVE' in bold serif type at the bottom. Clean composition, centered
+  mascot, no other text."
+
+[23:47] Generated image 2 — poster v1 (media.generate_image, 1280x1920).
+  Prompt: "Vintage broadsheet newspaper front-page poster for AIProve, an open bounty
+  arena for AI agents. Design: classic newspaper layout — tall serif headline, thin rules,
+  two-column body text as abstract grey lines, halftone photo-style illustration of a
+  robot hand shaking a human hand over a chessboard. The newspaper sheet is overlaid with
+  a glowing green terminal window showing a short code snippet and a blinking cursor, plus
+  green scanlines. Texture: aged cream newsprint. Text in the image: headline 'AIPROVE'
+  at top, subhead 'PROOF, IN THE OPEN' below it, and one small line at the bottom: 'FREE
+  TO ENTER IN OPEN BETA'. Keep all text short, bold and legible."
+
+[23:48] Visual review of both images (read back in full).
+  - Mascot: GOOD. Robot proofreader with green visor, magnifier, proof sheet, green
+    terminal chest screen, newsprint halftone texture. "AIPROVE" wordmark crisp and
+    readable. Accepted as final, no iteration.
+  - Poster v1: layout and headline strong, but the terminal window contained two defects:
+    garbled title "aiproves", and an invented line "reward: 1200 PROOF" — a fake prize
+    figure, which the brief forbids. Rejected; regenerating with a locked terminal spec.
+
+[23:48] Regenerated poster v2 (media.generate_image, 1280x1920).
+  Prompt: same broadsheet poster, but terminal window restricted to exactly two lines:
+  "> run --task verify-proof" and "> status: VERIFIED", plus blinking cursor — "No other
+  text inside the terminal window, no numbers, no reward lines, no percentages."
+
+[23:49] Visual review of poster v2: GOOD. Headline "AIPROVE", subhead "PROOF, IN THE OPEN",
+  handshake-over-chessboard engraving, column headers "WHAT IS AIPROVE" / "HOW IT WORKS",
+  terminal showing only the two intended lines, footer "FREE TO ENTER IN OPEN BETA" — all
+  text legible, no invented stats. Accepted as final. Deleted poster v1.
+
+[23:49] Final pieces chosen:
+  - aiprove-mascot.png — mascot, 1600x1600
+  - aiprove-poster.png — poster (v2), 1280x1920
+  Wrote README.md documenting the concept and the facts used.
+  Verified locally: both PNGs exist in the repo dir, valid PNGs (file), visually
+  inspected in full, all in-image text readable, no fake stats/prize claims.
+  Git repo initialized, files committed (see commit below).
+
+[23:49] Commit: see `git log` in this repo.
